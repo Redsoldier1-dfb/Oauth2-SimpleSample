@@ -1,3 +1,13 @@
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'OLE Automation Procedures', 1;
+GO
+RECONFIGURE;
+GO
+
+
 DECLARE @Object INT;
 DECLARE @contentType NVARCHAR(255);
 DECLARE @Url NVARCHAR(2048) = 'https://api.businesscentral.dynamics.com/v2.0/{Idtenant}/Sandbox/api/v2.0/companies';
